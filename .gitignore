@@ -1,14 +1,24 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+
+# testing
+.coverage
+/coverage
+
+# production
+.build/*
+/dist
+.next
+
+# misc
+.DS_Store
+.env
+.vscode/
 *~
 *.swp
 tmp/
 npm-debug.log
-.DS_Store
-
-
-.build/*
-.next
-.vscode/
-node_modules/
-.coverage
-.env
-.next
+yarn-debug.log*
+yarn-error.log*

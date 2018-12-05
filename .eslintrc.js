@@ -1,38 +1,38 @@
 module.exports = {
-  parser: 'babel-eslint',
-  extends: 'airbnb',
+  parser: "babel-eslint",
+  extends: ["airbnb", "prettier"],
   env: {
     browser: true,
-    jest: true,
+    jest: true
   },
-  plugins: ['react', 'jsx-a11y', 'import'],
+  plugins: ["react", "jsx-a11y", "import"],
   rules: {
-    'max-len': ['error', 100],
-    'no-underscore-dangle': ['error', { allow: ['_id'] }],
-    'prefer-destructuring': [
-      'error',
+    "max-len": ["error", 100],
+    "no-underscore-dangle": ["error", { allow: ["_id"] }],
+    "prefer-destructuring": [
+      "error",
       {
         VariableDeclarator: {
           array: false,
-          object: true,
+          object: true
         },
         AssignmentExpression: {
           array: true,
-          object: false,
-        },
+          object: false
+        }
       },
       {
-        enforceForRenamedProperties: false,
-      },
+        enforceForRenamedProperties: false
+      }
     ],
-    'import/prefer-default-export': 'off',
-    'jsx-a11y/anchor-is-valid': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [
-      'error',
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      "error",
       {
-        extensions: ['.js'],
-      },
-    ],
-  },
+        extensions: [".js"]
+      }
+    ]
+  }
 };

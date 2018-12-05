@@ -1,12 +1,20 @@
 {
   "name": "boilerplate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "dev": "nodemon server/app.js --watch server",
     "build": "next build",
     "start": "node server/app.js",
-    "dev": "nodemon server/app.js --watch server",
+    "precommit": "lint-staged",
     "lint": "eslint components pages lib server"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -35,9 +43,14 @@
     "babel-eslint": "^8.2.6",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "nodemon": "^1.18.6"
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "nodemon": "^1.18.6",
+    "prettier": "^1.15.3",
+    "prettier-eslint-cli": "^4.7.1"
   }
 }
