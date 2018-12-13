@@ -1,5 +1,5 @@
 ## Boilerplate
-Boilerplate with React, Ant Design, Next, Express, Mongoose, MongoDB.
+Boilerplate with React, Ant Design, Next, Express, Mongoose, MongoDB, Storybook.
 Based on [Builder Book boilerplate](https://github.com/builderbook/builderbook/tree/master/boilerplate "Builder Book boilerplate")
 
 ## Contents
@@ -15,6 +15,7 @@ Based on [Builder Book boilerplate](https://github.com/builderbook/builderbook/t
 * **express** as the server
 * **prettier** and **eslint** configured with **airbnb**'s styleguide for formating code
 * **husky** and **lint-staged** for autoformatting code before commit
+* **storybook** for interactive UI component dev & test
 
 ## Run locally
 - Clone the project and run `yarn` to add packages.
@@ -50,6 +51,7 @@ Based on [Builder Book boilerplate](https://github.com/builderbook/builderbook/t
 - [Express](https://github.com/expressjs/express)
 - [Mongoose](https://github.com/Automattic/mongoose)
 - [MongoDB](https://github.com/mongodb/mongo)
+- [Storybook](https://storybook.js.org/)
 
 #### Third party APIs
 - Google OAuth
@@ -61,6 +63,10 @@ Check out [package.json](https://github.com/AnDimitrov/nextjs-boilerplate/blob/m
 
 ```
 .
+├── .storybook            # Storybook configs
+│   ├── addons.js         # Addons
+│   ├── config.js         # Config
+│   ├── webpack.config.js # Custom webpack config
 ├── asserts               # Asserts
 │   ├── ant-custom.less   # Ant Design custom Less variables
 │   ├── styles.less       # Override Ant Design styles
@@ -83,6 +89,8 @@ Check out [package.json](https://github.com/AnDimitrov/nextjs-boilerplate/blob/m
 │   ├── app.js            # Custom Express/Next server
 │   ├── google.js         # Google OAuth API
 ├── static                # Static resources
+├── stories               # Storybook stories
+│   ├── index.js          # Main story for Storybook
 ├── .babelrc              # Config for Babel
 ├── .env.example          # Example environment variables
 ├── .eslintignore         # List of ignored files and directories for eslint

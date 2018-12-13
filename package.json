@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "node server/app.js",
     "precommit": "lint-staged",
-    "lint": "eslint components pages lib server"
+    "lint": "eslint components pages lib server",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.js": [
@@ -20,6 +22,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.10.9",
+    "babel-core": "^6.26.3",
     "babel-plugin-import": "^1.11.0",
     "connect-mongo": "^2.0.1",
     "dotenv": "^6.1.0",
@@ -40,7 +43,16 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@storybook/addon-actions": "^4.1.1",
+    "@storybook/addon-backgrounds": "^4.1.1",
+    "@storybook/addon-info": "^4.1.1",
+    "@storybook/addon-knobs": "^4.1.1",
+    "@storybook/addon-links": "^4.1.1",
+    "@storybook/addon-options": "^4.1.1",
+    "@storybook/addons": "^4.1.1",
+    "@storybook/react": "^4.1.1",
     "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
